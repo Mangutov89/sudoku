@@ -1,1 +1,28 @@
+body {
+  background-color: transparent;
+}
+.board,
+.three-by-three {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 5px solid black;
+}
 
+
+.board {
+  width: 900px;
+  height: 900px;
+  margin: 0 auto;
+  margin-top: 8%;
+}
+
+.three-by-three {
+  input {
+    text-align: center;
+    font-size: 40px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+  }
+}

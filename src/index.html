@@ -5,9 +5,106 @@
     <title>Test-webpack</title>
   </head>
   <body>
-    <div class="jumbotron">
-    <h1>Hello World
+    <div class="board">
+      <div class="top-left three-by-three">
+        <input type="number" class="row1 col1 box1" min="1" max="9" id="one">
+        <input type="number" class="row1 col2 box1" min="1" max="9" id="two">
+        <input type="number" class="row1 col3 box1" min="1" max="9" id="three">
+        <input type="number" class="row2 col1 box1" min="1" max="9" id="four">
+        <input type="number" class="row2 col2 box1" min="1" max="9" id="five">
+        <input type="number" class="row2 col3 box1" min="1" max="9" id="six">
+        <input type="number" class="row3 col1 box1" min="1" max="9" id="seven">
+        <input type="number" class="row3 col2 box1" min="1" max="9" id="eight">
+        <input type="number" class="row3 col3 box1" min="1" max="9" id="nine">
+      </div>
+      <div class="top-middle three-by-three">
+        <input type="number" class="row1 col4 box2" min="1" max="9" id="eleven">
+        <input type="number" class="row1 col5 box2" min="1" max="9" id="twelve">
+        <input type="number" class="row1 col6 box2" min="1" max="9" id="thirteen">
+        <input type="number" class="row2 col4 box2" min="1" max="9" id="fourteen">
+        <input type="number" class="row2 col5 box2" min="1" max="9" id="fifteen">
+        <input type="number" class="row2 col6 box2" min="1" max="9" id="sixteen">
+        <input type="number" class="row3 col4 box2" min="1" max="9" id="seventeen">
+        <input type="number" class="row3 col5 box2" min="1" max="9" id="eighteen">
+        <input type="number" class="row3 col6 box2" min="1" max="9" id="nineteen">
+      </div>
+      <div class="top-right three-by-three">
+        <input type="number" class="row1 col7 box3" min="1" max="9" id="twenty-one">
+        <input type="number" class="row1 col8 box3" min="1" max="9" id="twenty-two">
+        <input type="number" class="row1 col9 box3" min="1" max="9" id="twenty-three">
+        <input type="number" class="row2 col7 box3" min="1" max="9" id="twenty-four">
+        <input type="number" class="row2 col8 box3" min="1" max="9" id="twenty-five">
+        <input type="number" class="row2 col9 box3" min="1" max="9" id="twenty-six">
+        <input type="number" class="row3 col7 box3" min="1" max="9" id="twenty-seven">
+        <input type="number" class="row3 col8 box3" min="1" max="9" id="twenty-eight">
+        <input type="number" class="row3 col9 box3" min="1" max="9" id="twenty-nine">
+      </div>
+      <div class="middle-left three-by-three">
+        <input type="number" class="row4 col1 box4" min="1" max="9" id="thirty-one">
+        <input type="number" class="row4 col2 box4" min="1" max="9" id="thirty-two">
+        <input type="number" class="row4 col3 box4" min="1" max="9" id="thirty-three">
+        <input type="number" class="row5 col1 box4" min="1" max="9" id="thirty-four">
+        <input type="number" class="row5 col2 box4" min="1" max="9" id="thirty-five">
+        <input type="number" class="row5 col3 box4" min="1" max="9" id="thirty-six">
+        <input type="number" class="row6 col1 box4" min="1" max="9" id="thirty-seven">
+        <input type="number" class="row6 col2 box4" min="1" max="9" id="thirty-eight">
+        <input type="number" class="row6 col3 box4" min="1" max="9" id="thirty-nine">
+      </div>
+      <div class="middle three-by-three">
+        <input type="number" class="row4 col4 box5" min="1" max="9" id="fourty-one">
+        <input type="number" class="row4 col5 box5" min="1" max="9" id="fourty-two">
+        <input type="number" class="row4 col6 box5" min="1" max="9" id="fourty-three">
+        <input type="number" class="row5 col4 box5" min="1" max="9" id="fourty-four">
+        <input type="number" class="row5 col5 box5" min="1" max="9" id="fourty-five">
+        <input type="number" class="row5 col6 box5" min="1" max="9" id="fourty-six">
+        <input type="number" class="row6 col4 box5" min="1" max="9" id="fourty-seven">
+        <input type="number" class="row6 col5 box5" min="1" max="9" id="fourty-eight">
+        <input type="number" class="row6 col6 box5" min="1" max="9" id="fourty-nine">
+      </div>
+      <div class="middle-right three-by-three">
+        <input type="number" class="row4 col7 box6" min="1" max="9" id="fifty-one">
+        <input type="number" class="row4 col8 box6" min="1" max="9" id="fifty-two">
+        <input type="number" class="row4 col9 box6" min="1" max="9" id="fifty-three">
+        <input type="number" class="row5 col7 box6" min="1" max="9" id="fifty-four">
+        <input type="number" class="row5 col8 box6" min="1" max="9" id="fifty-five">
+        <input type="number" class="row5 col9 box6" min="1" max="9" id="fifty-six">
+        <input type="number" class="row6 col7 box6" min="1" max="9" id="fifty-seven">
+        <input type="number" class="row6 col8 box6" min="1" max="9" id="fifty-eight">
+        <input type="number" class="row6 col9 box6" min="1" max="9" id="fifty-nine">
+      </div>
+      <div class="bottom-left three-by-three">
+        <input type="number" class="row7 col1 box7" min="1" max="9" id="sixty-one">
+        <input type="number" class="row7 col2 box7" min="1" max="9" id="sixty-two">
+        <input type="number" class="row7 col3 box7" min="1" max="9" id="sixty-three">
+        <input type="number" class="row8 col1 box7" min="1" max="9" id="sixty-four">
+        <input type="number" class="row8 col2 box7" min="1" max="9" id="sixty-five">
+        <input type="number" class="row8 col3 box7" min="1" max="9" id="sixty-six">
+        <input type="number" class="row9 col1 box7" min="1" max="9" id="sixty-seven">
+        <input type="number" class="row9 col2 box7" min="1" max="9" id="sixty-eight">
+        <input type="number" class="row9 col3 box7" min="1" max="9" id="sixty-nine">
+      </div>
+      <div class="bottom-middle three-by-three">
+        <input type="number" class="row7 col4 box8" min="1" max="9" id="seventy-one">
+        <input type="number" class="row7 col5 box8" min="1" max="9" id="seventy-two">
+        <input type="number" class="row7 col6 box8" min="1" max="9" id="seventy-three">
+        <input type="number" class="row8 col4 box8" min="1" max="9" id="seventy-four">
+        <input type="number" class="row8 col5 box8" min="1" max="9" id="seventy-five">
+        <input type="number" class="row8 col6 box8" min="1" max="9" id="seventy-six">
+        <input type="number" class="row9 col4 box8" min="1" max="9" id="seventy-seven">
+        <input type="number" class="row9 col5 box8" min="1" max="9" id="seventy-eight">
+        <input type="number" class="row9 col6 box8" min="1" max="9" id="seventy-nine">
+      </div>
+      <div class="bottom-right three-by-three">
+        <input type="number" class="row7 col7 box9" min="1" max="9" id="eighty-one">
+        <input type="number" class="row7 col8 box9" min="1" max="9" id="eighty-two">
+        <input type="number" class="row7 col9 box9" min="1" max="9" id="eighty-three">
+        <input type="number" class="row8 col7 box9" min="1" max="9" id="eighty-four">
+        <input type="number" class="row8 col8 box9" min="1" max="9" id="eighty-five">
+        <input type="number" class="row8 col9 box9" min="1" max="9" id="eighty-six">
+        <input type="number" class="row9 col7 box9" min="1" max="9" id="eighty-seven">
+        <input type="number" class="row9 col8 box9" min="1" max="9" id="eighty-eight">
+        <input type="number" class="row9 col9 box9" min="1" max="9" id="eighty-nine">
+      </div>
     </div>
-    <h2><a href="example.html">Example</a></h2>
   </body>
 </html>
