@@ -600,45 +600,57 @@ export function square(where) {
 }
 function checkRow(row, int) {
   var array = [];
-  var isValid = true;
   console.log(row);
+  console.log(int);
+  var isValid = "true";
   $("." + row).each(function() {
     var sum = parseFloat($(this).val());
-    if(sum) {
-      console.log(sum);
-
-    }
-    if(sum == int) {
-      isValid = false;
-      console.log("Is False");
-      return isValid;
-    }
+    var a = parseInt(sum);
+    array.push(sum);
   });
+  console.log("This is the array: "+ array);
+  for (var i = 0; i < array.length + 1; i++) {
+    var currentSum = array[i];
+    console.log(currentSum);
+    if(currentSum == int) {
+      isValid = "false";
+      console.log("This is false");
+    }
+  }
+  return isValid;
 }
 
 
 function checkColumn(column, int) {
   var array = [];
-  var isValid = true;
+  var isValid = "true";
   $("." + column).each(function() {
-    if(this == int) {
-      isValid = false;
-    }
+    var sum = parseFloat($(this).val());
+    array.push(sum);
   });
+  for (var i = 0; i < array.length + 1; i++) {
+    var currentSum = array[i];
+    if(currentSum == int) {
+      isValid = "false";
+    }
+  }
   return isValid;
-
 }
 
 
 function checkBox(box, int) {
   var array = [];
-  var isValid = true;
-
-  $(".box" + box).each(function() {
-    if(this == int) {
-      isValid = false;
-    }
+  var isValid = "true";
+  $("." + box).each(function() {
+    var sum = parseFloat($(this).val());
+    array.push(sum);
   });
+  for (var i = 0; i < array.length + 1; i++) {
+    var currentSum = array[i];
+    if(currentSum == int) {
+      isValid = "false";
+    }
+  }
   return isValid;
 
 }
@@ -674,7 +686,271 @@ function findBox(row, column) {
   }
 }
 
+function getCoords(row, column) {
+  if(row == 1) {
+    if(column == 1) {
+      return("one");
+    }
+    if(column == 2) {
+      return("two");
+    }
+    if(column == 3) {
+      return("three");
+    }
+    if(column == 4) {
+      return ("eleven");
+    }
+    if(column == 5) {
+      return("twelve");
+    }
+    if(column == 6) {
+      return ("thirteen");
+    }
+    if(column == 7) {
+      return ("twenty-one");
+    }
+    if(column == 8) {
+      return ("twenty-two");
+    }
+    if(column == 9) {
+      return ("twenty-three");
+    }
+  }
+  if(row == 2) {
+    if(column == 1) {
+      return("four");
+    }
+    if(column == 2) {
+      return("five");
+    }
+    if(column == 3) {
+      return("six");
+    }
+    if(column == 4) {
+      return ("fourteen");
+    }
+    if(column == 5) {
+      return("fifteen");
+    }
+    if(column == 6) {
+      return ("sixteen");
+    }
+    if(column == 7) {
+      return ("twenty-four");
+    }
+    if(column == 8) {
+      return ("twenty-five");
+    }
+    if(column == 9) {
+      return ("twenty-six");
+    }
+  }
+  if(row == 3) {
+    if(column == 1) {
+      return("seven");
+    }
+    if(column == 2) {
+      return("eight");
+    }
+    if(column == 3) {
+      return("nine");
+    }
+    if(column == 4) {
+      return ("seventeen");
+    }
+    if(column == 5) {
+      return("eighteen");
+    }
+    if(column == 6) {
+      return ("nineteen");
+    }
+    if(column == 7) {
+      return ("twenty-seven");
+    }
+    if(column == 8) {
+      return ("twenty-eight");
+    }
+    if(column == 9) {
+      return ("twenty-nine");
+    }
+  }
+  if(row == 4) {
+    if(column == 1) {
+      return("thirty-one");
+    }
+    if(column == 2) {
+      return("thirty-two");
+    }
+    if(column == 3) {
+      return("thirty-three");
+    }
+    if(column == 4) {
+      return ("fourty-one");
+    }
+    if(column == 5) {
+      return("fourty-two");
+    }
+    if(column == 6) {
+      return ("fourty-three");
+    }
+    if(column == 7) {
+      return ("fifty-one");
+    }
+    if(column == 8) {
+      return ("fifty-two");
+    }
+    if(column == 9) {
+      return ("fifty-three");
+    }
+  }
+  if(row == 5) {
+    if(column == 1) {
+      return("thirty-four");
+    }
+    if(column == 2) {
+      return("thirty-five");
+    }
+    if(column == 3) {
+      return("thirty-six");
+    }
+    if(column == 4) {
+      return ("fourty-four");
+    }
+    if(column == 5) {
+      return("fourty-five");
+    }
+    if(column == 6) {
+      return ("fourty-six");
+    }
+    if(column == 7) {
+      return ("fifty-four");
+    }
+    if(column == 8) {
+      return ("fifty-five");
+    }
+    if(column == 9) {
+      return ("fifty-six");
+    }
+  }
+  if(row == 6) {
+    if(column == 1) {
+      return("thirty-seven");
+    }
+    if(column == 2) {
+      return("thirty-eight");
+    }
+    if(column == 3) {
+      return("thirty-nine");
+    }
+    if(column == 4) {
+      return ("fourty-seven");
+    }
+    if(column == 5) {
+      return("fourty-eight");
+    }
+    if(column == 6) {
+      return ("fourty-nine");
+    }
+    if(column == 7) {
+      return ("fifty-seven");
+    }
+    if(column == 8) {
+      return ("fifty-eight");
+    }
+    if(column == 9) {
+      return ("fifty-nine");
+    }
+  }
+  if(row == 7) {
+    if(column == 1) {
+      return("sixty-one");
+    }
+    if(column == 2) {
+      return("sixty-two");
+    }
+    if(column == 3) {
+      return("sixty-three");
+    }
+    if(column == 4) {
+      return ("seventy-one");
+    }
+    if(column == 5) {
+      return("seventy-two");
+    }
+    if(column == 6) {
+      return ("seventy-three");
+    }
+    if(column == 7) {
+      return ("eighty-one");
+    }
+    if(column == 8) {
+      return ("eighty-two");
+    }
+    if(column == 9) {
+      return ("eighty-three");
+    }
+  }
+  if(row == 8) {
+    if(column == 1) {
+      return("sixty-four");
+    }
+    if(column == 2) {
+      return("sixty-five");
+    }
+    if(column == 3) {
+      return("sixty-six");
+    }
+    if(column == 4) {
+      return ("seventy-four");
+    }
+    if(column == 5) {
+      return("seventy-five");
+    }
+    if(column == 6) {
+      return ("seventy-six");
+    }
+    if(column == 7) {
+      return ("eighty-four");
+    }
+    if(column == 8) {
+      return ("eighty-five");
+    }
+    if(column == 9) {
+      return ("eighty-six");
+    }
+  }
+  if(row == 9) {
+    if(column == 1) {
+      return("sixty-seven");
+    }
+    if(column == 2) {
+      return("sixty-eight");
+    }
+    if(column == 3) {
+      return("sixty-nine");
+    }
+    if(column == 4) {
+      return ("seventy-seven");
+    }
+    if(column == 5) {
+      return("seventy-eight");
+    }
+    if(column == 6) {
+      return ("seventy-nine");
+    }
+    if(column == 7) {
+      return ("eighty-seven");
+    }
+    if(column == 8) {
+      return ("eighty-eight");
+    }
+    if(column == 9) {
+      return ("eighty-nine");
+    }
+  }
 
+
+}
 
 export function placeRandom() {
   var random = Math.floor((Math.random() * 10) + 1);
@@ -683,34 +959,31 @@ export function placeRandom() {
   for (var i = 0; i < random; i++) {
     var place = false;
     while (place == false) {
-      // debugger;
       var row = Math.floor((Math.random() * 8) + 1);
-      var rows = ["row1", "row2", "row3", "row3", "row4", "row5", "row6", "row7", "row8", "row9"];
-      row = rows[row];
-      // console.log(row);
+      var rows = ["Nothing", "row1", "row2", "row3", "row4", "row5", "row6", "row7", "row8", "row9"];
+      var columns = ["Nothing", "col1", "col2", "col3", "col4", "col5", "col6", "col7", "col8", "col9"];
+      var boxs = ["Nothing", "box1", "box2", "box3", "box4", "box5", "box6", "box7", "box8", "box9"];
+      var box = Math.floor((Math.random() * 8) + 1);
+      box = boxs[box];
       var column = Math.floor((Math.random() * 8) + 1);
-      var randomInt = Math.floor((Math.random() * 80));
-      console.log(locations.length);
-      var number = locations[randomInt];
-      console.log(number);
-      var randomNumber = Math.floor((Math.random() * 8) + 1);
-      debugger;
       var squareCheck = findBox(row, column);
+      var number = getCoords(row, column);
+      row = rows[row];
+      column = columns[column];
+      var randomInt = Math.floor((Math.random() * 80));
+      var randomNumber = Math.floor((Math.random() * 8) + 1);
       var rowIsValid = checkRow(row, randomNumber);
       var columnIsValid = checkColumn(column, randomNumber);
+      squareCheck = boxs[squareCheck];
       var boxIsValid = checkBox(squareCheck, randomNumber);
-      console.log(rowIsValid, columnIsValid, boxIsValid);
-      if (rowIsValid == true && columnIsValid == true && boxIsValid == true) {
+      (rowIsValid, columnIsValid, boxIsValid);
+      if (rowIsValid == "true" && columnIsValid == "true" && boxIsValid == "true") {
         document.getElementById(number).setAttribute('readonly', 'readonly');
         document.getElementById(number).value = randomNumber;
 
+
         place = true;
       }
-
-
     }
-    // $("#" + number).css("placeHolder", randomInt);
-    // $("#" + number).css("background-color", "black");
-    // $("#" + number).css("placeholder", "HI");
   }
 }
